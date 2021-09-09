@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animate circle text | Анимированный кругом текст</title>
+  <link rel="stylesheet" href="./css/styles.min.css">
+</head>
+<body>
+  
+  <div class="animate-circle-text">
+    <img src="./me.jpg" class="animate-circle-text__logo">
+      <h1 class="animate-circle-text__title">front-end разработчик веб-сайтов - </h1>
+  </div>
+
+  <script>
+    let title = document.querySelector('.animate-circle-text__title');
+
+    title.innerHTML = title.innerText.split('').map(function(char, i) {
+      return `<span class="animate-circle-text__title-letter" style="transform: rotate(${i * 10.2}deg)">${char}</span>`;
+    }).join('');
+  </script>
+
+</body>
+</html>
